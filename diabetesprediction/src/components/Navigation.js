@@ -11,15 +11,15 @@ export const Navigation = () => {
         </div>
      
       <ul className="flex justify-between space-x-40 p-2 col-span-3">
-        <div className=' flex justify-evenly bg-white'>
+        <div className=' flex justify-evenly '>
         <li className="text-lg font-medium p-2 my-5 mx-7 " > <Link to="/">Home </Link></li>
          <li className="text-lg font-medium p-2 my-5 mx-7 "> <Link to="/Prediction">Prediction </Link></li>
         <li className="text-lg font-medium p-2 my-5 mx-7"> <Link to="/Maintanence"> Maintenance </Link></li>
         </div>
 
         {/* login/sign up */}
-        <div className='col-span-1 bg-orange-200 flex justify-self-end'>
-        <li className='text-lg font-medium p-2 my-5 mx-7 '> <Link>login </Link></li>
+        <div className='col-span-1  flex justify-self-end'>
+        <li className='text-lg font-medium p-2 my-5 mx-7 '> <Link to="/Login">Login </Link></li>
 
         <li className='text-lg font-medium p-2 my-5 mx-7 '> <Link>SignUp </Link></li>
         </div>
