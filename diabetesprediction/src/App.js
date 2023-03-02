@@ -1,39 +1,44 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-
-} from "react-router-dom";
-import { Home } from "./components/Home";
-import Prediction from "./components/Prediction";
-import Maintanence from "./components/Maintanence";
-import { Login } from "./components/Login";
-
-import './App.css';
-import { Navigation } from "./components/Navigation";
-
-function App() {
+import { Link } from "react-router-dom";
+// flex justify-between items-center
+export const Navigation = () => {
   return (
     <>
-      <Router>
-       <Navigation/>
-      <main>
-      <Routes>
-          <Route path="/" element={<Home/>} />
+      <nav className="grid grid-cols-4 items-center  bg-red-200 space-x-64">
+        <div className="py-3 w-11 bg-slate-300">
+          <h1 className="text-5xl text-rose-500 font-bold px-4 py-2">LOGO</h1>
+        </div>
 
-          
-          <Route path="/Prediction" element={<Prediction/>} />
-         
+        <ul className="flex justify-between space-x-40 p-2 col-span-3">
+          <div className=" flex justify-evenly ">
+            <li className="text-lg font-medium p-2 my-5 mx-7 ">
+              {" "}
+              <Link to="/">Home </Link>
+            </li>
+            <li className="text-lg font-medium p-2 my-5 mx-7 ">
+              {" "}
+              <Link to="/Prediction">Prediction </Link>
+            </li>
+            <li className="text-lg font-medium p-2 my-5 mx-7">
+              {" "}
+              <Link to="/Maintanence"> Maintenance </Link>
+            </li>
+          </div>
 
-          <Route path="/Maintanence" element={<Maintanence/> } /> 
-          <Route path="/Login" element={<Login/> } /> 
-          
-        </Routes>
-      </main>
-    </Router>  
+          {/* login/sign up */}
+          <div className="col-span-1  flex justify-self-end">
+            <li className="text-lg font-medium p-2 my-5 mx-7 ">
+              {" "}
+              <Link to="/Login">Login </Link>
+            </li>
+
+            <li className="text-lg font-medium p-2 my-5 mx-7 ">
+              {" "}
+              <Link>SignUp </Link>
+            </li>
+          </div>
+        </ul>
+      </nav>
     </>
   );
-}
-
-export default App;
+};
