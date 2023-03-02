@@ -6,8 +6,8 @@ import {
 
 } from "react-router-dom";
 import { Home } from "./components/Home";
-import {Prediction} from "./components/Prediction";
-import { Maintanence } from "./components/Maintanence";
+import Prediction from "./components/Prediction";
+import Maintanence from "./components/Maintanence";
 import { Login } from "./components/Login";
 
 import './App.css';
